@@ -11,6 +11,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import StatisticWidget from '../dashboard/components/statistic_widget';
 import NetProfit from '../dashboard/components/net_profit';
 import HighlightsSection from '../dashboard/components/highlights_section';
+import CustomGraph from './components/barchart'
 
 function Dashboard() {
     const profile_image = 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg';
@@ -103,6 +104,7 @@ function Dashboard() {
                     <HighlightsSection Icon={CiBurger} icon_background={'#9DADFF'} icon_color={'blue'} title={'Popular Dishes'} src={''} />
                     <HighlightsSection Icon={BiDish} icon_background={'#A1FBC7'} icon_color={'green'} title={'Menus'} src={''} />
                 </div>
+                <CustomGraph />
             </main>
         </div>
     </div>

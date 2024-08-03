@@ -1,4 +1,6 @@
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
+import { PieChart, Pie, Cell, Label } from 'recharts';
+
 
 function NetProfit(props) {
     const {
@@ -25,8 +27,7 @@ function NetProfit(props) {
             </div>
         </div>
         <div>
-            <p className="text-lg">{goal_percentage}%</p>
-            <p className="text-xs">Goal Completed</p>
+            <MyPieChart />
             <p>
                 The values here has been rounded off.
             </p>
@@ -35,3 +36,35 @@ function NetProfit(props) {
 }
 
 export default NetProfit;
+
+
+const data = [{ name: 'value', value: 70 }];
+
+const MyPieChart = () => {
+    const totalValue = data[0].value;
+    const percentage = `${totalValue}%`;
+
+    return (
+        <PieChart width={200} height={200}>
+            <Pie
+                data={data}
+                cx={100}
+                cy={100}
+                innerRadius={46}
+                outerRadius={60}
+                paddingAngle={5}
+                cornerRadius={40}
+                fill="#8884d8"
+            >
+                <Cell fill="#fff" />
+                <Label
+                    value={percentage}
+                    position="center"
+                    fontSize={24}
+                    fontWeight="bold"
+                    fill="#fff"
+                />
+            </Pie>
+        </PieChart>
+    );
+};

@@ -9,9 +9,11 @@ import { BiWalletAlt, BiTargetLock, BiDish } from "react-icons/bi";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
 import StatisticWidget from '../dashboard/components/statistic_widget';
-import NetProfit from '../dashboard/components/net_profit';
+import NetProfit from '../dashboard/components/net_profit_section';
 import HighlightsSection from '../dashboard/components/highlights_section';
-import CustomGraph from './components/barchart'
+import CustomGraph from './components/barchart_section'
+import RecentOrders from './components/recent_orders_section'
+import CustomerFeedBackSection from './components/customer_feedback_section';
 
 function Dashboard() {
     const profile_image = 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg';
@@ -48,49 +50,49 @@ function Dashboard() {
                 <AiOutlineLogout className="mb-8" />
             </aside>
             <main className="w-full p-4 text-white">
-                <p className="text-xl font-bold">Dashboard</p>
-                <div className="grid grid-cols-4 gap-2 py-3">
-                    <StatisticWidget
-                        Icon={FaShoppingBasket}
-                        icon_background={'#9DADFF'} icon_color={'blue'} title={'Total Orders'}
-                        symbol={''}
-                        amount={'75'}
-                        suffix={''}
-                        trend_indicator={'up'}
-                        percentage={'3'}
-                    />
-                    <StatisticWidget
-                        Icon={FaShoppingBag}
-                        icon_background={'#A1FBC7'} icon_color={'green'}
-                        title={'Total Delivered'}
-                        symbol={''}
-                        amount={'70'}
-                        suffix={''}
-                        trend_indicator={'down'}
-                        percentage={'3'}
-                    />
-                    <StatisticWidget
-                        Icon={FaShoppingBag}
-                        icon_background={'#FF9DA0'} icon_color={'red'}
-                        title={'Total Cancelled'}
-                        symbol={''}
-                        amount={'05'}
-                        suffix={''}
-                        trend_indicator={'down'}
-                        percentage={'3'}
-                    />
-                    <StatisticWidget
-                        Icon={FaArrowTrendUp}
-                        icon_background={'#FF9DFF'} icon_color={'#FF4BFF'}
-                        title={'Total Revenue'}
-                        symbol={'$'}
-                        amount={'12'}
-                        suffix={'k'}
-                        trend_indicator={'down'}
-                        percentage={'3'}
-                    />
-                </div>
-                <div>
+                <p className="text-xl font-bold py-4">Dashboard</p>
+                <div className="grid grid-cols-10 gap-6">
+                    <div className="grid grid-cols-4 col-span-6 gap-2">
+                        <StatisticWidget
+                            Icon={FaShoppingBasket}
+                            icon_background={'#9DADFF'} icon_color={'blue'} title={'Total Orders'}
+                            symbol={''}
+                            amount={'75'}
+                            suffix={''}
+                            trend_indicator={'up'}
+                            percentage={'3'}
+                        />
+                        <StatisticWidget
+                            Icon={FaShoppingBag}
+                            icon_background={'#A1FBC7'} icon_color={'green'}
+                            title={'Total Delivered'}
+                            symbol={''}
+                            amount={'70'}
+                            suffix={''}
+                            trend_indicator={'down'}
+                            percentage={'3'}
+                        />
+                        <StatisticWidget
+                            Icon={FaShoppingBag}
+                            icon_background={'#FF9DA0'} icon_color={'red'}
+                            title={'Total Cancelled'}
+                            symbol={''}
+                            amount={'05'}
+                            suffix={''}
+                            trend_indicator={'down'}
+                            percentage={'3'}
+                        />
+                        <StatisticWidget
+                            Icon={FaArrowTrendUp}
+                            icon_background={'#FF9DFF'} icon_color={'#FF4BFF'}
+                            title={'Total Revenue'}
+                            symbol={'$'}
+                            amount={'12'}
+                            suffix={'k'}
+                            trend_indicator={'down'}
+                            percentage={'3'}
+                        />
+                    </div>
                     <NetProfit
                         title={'Net Profit'}
                         trend_indicator={'up'}
@@ -98,13 +100,15 @@ function Dashboard() {
                         change_percentage={'3'}
                         goal_percentage={'70'}
                     />
+                    <CustomGraph />
+                    <div className="col-span-4 my-3 p-4 rounded-md bg-slate-800 flex flex-col gap-3">
+                        <HighlightsSection Icon={BiTargetLock} icon_background={'#FF9DA0'} icon_color={'red'} title={'Goals'} src={''} />
+                        <HighlightsSection Icon={CiBurger} icon_background={'#9DADFF'} icon_color={'blue'} title={'Popular Dishes'} src={''} />
+                        <HighlightsSection Icon={BiDish} icon_background={'#A1FBC7'} icon_color={'green'} title={'Menus'} src={''} />
+                    </div>
+                    <RecentOrders />
+                    <CustomerFeedBackSection />
                 </div>
-                <div className="my-3 p-4 rounded-md bg-slate-800 flex flex-col gap-3">
-                    <HighlightsSection Icon={BiTargetLock} icon_background={'#FF9DA0'} icon_color={'red'} title={'Goals'} src={''} />
-                    <HighlightsSection Icon={CiBurger} icon_background={'#9DADFF'} icon_color={'blue'} title={'Popular Dishes'} src={''} />
-                    <HighlightsSection Icon={BiDish} icon_background={'#A1FBC7'} icon_color={'green'} title={'Menus'} src={''} />
-                </div>
-                <CustomGraph />
             </main>
         </div>
     </div>

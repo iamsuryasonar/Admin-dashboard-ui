@@ -1,55 +1,15 @@
 import React from 'react';
 
-const customers = [
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Delivered',
-    },
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Cancelled',
-    },
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Pending',
-    },
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Delivered',
-    },
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Cancelled',
-    },
-    {
-        profilePic: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-        name: 'John Doe',
-        orderNo: '15478259',
-        amount: '$124.00',
-        status: 'Pending',
-    },
-];
+function RecentOrders(props) {
 
-function RecentOrders() {
+    const {
+        recent_orders,
+    } = props;
+
     return (
-        <div className="col-span-6 flex flex-col p-4 rounded-md bg-slate-800 text-white">
-            <h1 className="text-xl font-bold">Recent Orders</h1>
-            <table className="w-full table-auto divide-y divide-slate-700 ">
+        <div className="h-full col-span-4 row-span-3 flex flex-col p-4 rounded-md bg-slate-800 text-white">
+            <h1 className="font-bold">Recent Orders</h1>
+            <table className="w-full h-full table-auto divide-y divide-slate-700 ">
                 <thead className="">
                     <tr>
                         <th className="py-2 text-left">
@@ -68,7 +28,7 @@ function RecentOrders() {
                 </thead>
                 <tbody className="divide-y divide-slate-700">
                     {
-                        customers.map((customer, index) => {
+                        recent_orders.map((customer, index) => {
                             return (
                                 <tr className="">
                                     <td className="flex items-center py-2 whitespace-nowrap">
@@ -81,8 +41,8 @@ function RecentOrders() {
                                     <td className="py-2 whitespace-nowrap">
                                         {customer.amount}
                                     </td>
-                                    <td className="flex items-center py-2 whitespace-nowrap">
-                                        <div className={`px-3 rounded-full text-center ${customer.status === 'Delivered' ? 'bg-green-900 text-green-500' : 'bg-red-900 text-red-500'}`}>
+                                    <td className="py-2 whitespace-nowrap">
+                                        <div className={`px-3 rounded-full inline-block text-center ${customer.status === 'Delivered' ? 'bg-green-900 text-green-500' : 'bg-red-900 text-red-500'}`}>
                                             <p>{customer.status}</p>
                                         </div>
                                     </td>

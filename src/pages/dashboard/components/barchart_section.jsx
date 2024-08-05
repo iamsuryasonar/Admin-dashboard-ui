@@ -3,44 +3,43 @@ import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine
 } from 'recharts';
 
-const xAxisData = [
-    { value: 15 },
-    { value: 18 },
-    { value: 10 },
-    { value: 16 },
-    { value: 12 },
-    { value: 9 },
-    { value: 4 },
-    { value: 6 },
-    { value: 12 },
-    { value: 8 },
-    { value: 6 },
-    { value: 4 },
-    { value: 6 },
-    { value: 12 },
-    { value: 8 },
-    { value: 6 },
-];
+import { FaCaretDown } from "react-icons/fa";
 
-const yAxisData = [0, 5, 10, 15, 20];
-
-const CustomGraph = () => {
+const CustomGraph = (props) => {
+    const {
+        xAxisData,
+        yAxisData
+    } = props;
 
     return (
-        <div className='col-span-6 '>
-            <ResponsiveContainer width="100%" height={400}>
+        <div className='w-full h-full col-span-4 row-span-2 bg-slate-800 rounded-md flex flex-col'>
+            <div className='p-3 flex justify-between items-center'>
+                <p className='font-bold'>Activity</p>
+                <div className="relative">
+                    <select id="tenure" name="tenure" className="block appearance-none w-full text-xs bg-slate-800 border border-gray-700 hover:border-gray-600 px-3 py-1 pr-7 rounded-full focus:outline-none focus:shadow-outline">
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                        <FaCaretDown />
+                    </div>
+                </div>
+            </div>
+            <ResponsiveContainer width="100%" height="100%">
                 <BarChart
-                    width={500}
-                    height={300}
+                    width="100%"
+                    height="100%"
                     data={xAxisData}
                     margin={{
-                        top: 50, right: 20, left: 20, bottom: 50,
+                        top: 0, right: 14, left: -14, bottom: 0,
                     }}
                 >
                     <CartesianGrid vertical={false} opacity={0.2} />
                     <XAxis
                         ticks={[5, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27]}
                         tickLine={false}
+                        tick={<CustomAxisTick />}
                     />
                     <YAxis
                         axisLine={false}
@@ -49,10 +48,13 @@ const CustomGraph = () => {
                         tickFormatter={(value) => {
                             if (value === 0) return `${value}`;
                             return `${value}k`;
+
                         }}
+                        tickCount={4}
+                        tick={<CustomAxisTick />}
                     />
                     {/* <Tooltip /> */}
-                    <Bar dataKey="value" fill="#82ca9d" radius={[100, 100, 100, 100]} barSize={30} />
+                    <Bar dataKey="value" fill="#82ca9d" radius={[100, 100, 100, 100]} barSize={16} />
                 </BarChart>
             </ResponsiveContainer>
         </div>
@@ -60,3 +62,17 @@ const CustomGraph = () => {
 }
 
 export default CustomGraph;
+
+
+function CustomAxisTick(props) {
+    const { x, y, stroke, payload } = props;
+
+    return (
+        <g transform={`translate(${x},${y})`}>
+            <text x={0} y={0} dy={16} textAnchor="end" fill="#666" transform={`translate(${-4},${-6})`} className='text-xs'>
+                {payload.value}
+            </text>
+        </g>
+    );
+}
+

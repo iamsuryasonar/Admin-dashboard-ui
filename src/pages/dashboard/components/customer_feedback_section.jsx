@@ -2,86 +2,14 @@ import { Rating, ThinRoundedStar } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 function CustomerFeedBackSection(props) {
-
-    const feedbacks = [
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        },
-        {
-            profileImage: 'https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg',
-            name: 'John Doe',
-            rating: 3,
-            feedback: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus.',
-        }
-    ]
+    const {
+        feedbacks
+    } = props;
 
     return (
-        <div className='col-span-4 p-4 rounded-md bg-slate-800'>
-            <p className='pb-1 text-xl font-bold'>Customer's Feedback</p>
-            <div className='overflow-auto'>
+        <div className='w-full col-span-3 row-span-3 rounded-md bg-slate-800 flex flex-col'>
+            <p className='p-4 font-bold'>Customer's Feedback</p>
+            <div className='h-full overflow-auto'>
                 {
                     feedbacks.map((feedback) => {
                         return (
@@ -112,10 +40,10 @@ function Feedback(props) {
     };
 
     return (
-        <div className='flex flex-col gap-2 my-3'>
+        <div className='flex flex-col gap-2 pb-4 px-4'>
             <div className="flex">
                 <img className="h-8 w-8 rounded-full mr-2" src={profileImage} alt={`Profile image of ${name}`} />
-                <p className="text-xl">{name}</p>
+                <p className="">{name}</p>
             </div>
 
             <Rating

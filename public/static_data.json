@@ -1,0 +1,152 @@
+{
+    "net_profit_information": {
+        "trend_indicator": "up",
+        "amount": 6759.25,
+        "change_percentage": 3,
+        "goal_percentage": 70
+    },
+    "other_information": {
+        "total_orders": "75",
+        "total_delivered": "70",
+        "total_cancelled": "05",
+        "total_revenue": "12"
+    },
+    "recent_orders": [
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Delivered"
+        },
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Cancelled"
+        },
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Pending"
+        },
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Delivered"
+        },
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Cancelled"
+        },
+        {
+            "profilePic": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "orderNo": "15478259",
+            "amount": "124.00",
+            "status": "Pending"
+        }
+    ],
+    "xAxisData": [
+        {
+            "value": 11
+        },
+        {
+            "value": 12
+        },
+        {
+            "value": 10
+        },
+        {
+            "value": 14
+        },
+        {
+            "value": 12
+        },
+        {
+            "value": 9
+        },
+        {
+            "value": 4
+        },
+        {
+            "value": 6
+        },
+        {
+            "value": 12
+        },
+        {
+            "value": 8
+        },
+        {
+            "value": 6
+        },
+        {
+            "value": 4
+        },
+        {
+            "value": 6
+        },
+        {
+            "value": 12
+        },
+        {
+            "value": 8
+        },
+        {
+            "value": 6
+        }
+    ],
+    "yAxisData": [
+        0,
+        5,
+        10,
+        15
+    ],
+    "feedbacks": [
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        }
+    ]
+}

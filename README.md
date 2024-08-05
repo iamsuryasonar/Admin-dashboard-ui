@@ -30,13 +30,15 @@ The application will run at http://localhost:5173/.
 ```
 Admin-dashboard-ui/
 ├── public/
+├── ├── static_data.json
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   ├── hooks/
 │   ├── pages/
 |       ├── dashboard/
 |           ├── components/
-|           ├── dashboard.jsx/ 
+|           ├── index.jsx/ 
 │   ├── App.js
 │   ├── index.js
 │   └── ...

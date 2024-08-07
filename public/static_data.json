@@ -121,13 +121,25 @@
         {
             "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
             "name": "John Doe",
-            "rating": 3,
+            "rating": 2,
             "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
         },
         {
             "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
             "name": "John Doe",
-            "rating": 3,
+            "rating": 1,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 5,
+            "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
+        },
+        {
+            "profileImage": "https://iamsuryasonar.netlify.app/assets/dp-bIzYPUqU.jpg",
+            "name": "John Doe",
+            "rating": 3.5,
             "feedback": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore porro ea officia, modi, alias quis et dicta ducimus quas delectus natus dolorum inventore minima optio ex nesciunt. Odio, ducimus."
         },
         {

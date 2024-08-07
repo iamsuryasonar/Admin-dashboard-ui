@@ -12,7 +12,7 @@ const CustomGraph = (props) => {
     } = props;
 
     return (
-        <div className='w-full h-full col-span-4 row-span-2 bg-slate-800 rounded-md flex flex-col'>
+        <div className='w-full h-[212px] lg:col-span-4 lg:row-span-2 bg-slate-800 rounded-md flex flex-col'>
             <div className='p-3 flex justify-between items-center'>
                 <p className='font-bold'>Activity</p>
                 <div className="relative">
@@ -30,6 +30,7 @@ const CustomGraph = (props) => {
                 <BarChart
                     width="100%"
                     height="100%"
+                    className=''
                     data={xAxisData}
                     margin={{
                         top: 0, right: 14, left: -14, bottom: 0,

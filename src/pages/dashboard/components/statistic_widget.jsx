@@ -14,15 +14,15 @@ function StatisticWidget(props) {
         percentage,
     } = props;
 
-    return <div className="bg-slate-800 rounded-md p-2">
-        <div className="p-2 w-fit rounded-md bg-slate-700"
+    return <div className="col-span-1 row-span-1 p-3 flex flex-col justify-between bg-slate-800 rounded-md">
+        <div className="p-3 w-fit rounded-md"
             style={{
                 backgroundColor: icon_background,
                 color: icon_color,
             }}>
             <Icon />
         </div>
-        <p className="text-xs py-1">{title}</p>
+        <p className="text-sm py-1">{title}</p>
         <div className="flex justify-between">
             <div className="flex text-lg font-bold">
                 <p>{symbol}</p>

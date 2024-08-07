@@ -3,6 +3,7 @@ import Dashboard from './pages/dashboard/index'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
 import Analytics from './pages/analytics/index';
+import './App.css';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
       <Sidebar />
       <main className="flex min-h-svh">
         <Navbar />
-        <div className="flex-1 ml-[60px] mt-[60px] min-h-svh bg-slate-900 text-white">
+        <div className="w-screen ml-[60px] mt-[60px] min-h-svh bg-slate-900 text-white">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/analytics" element={<Analytics />} />

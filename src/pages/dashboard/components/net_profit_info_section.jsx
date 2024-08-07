@@ -10,10 +10,10 @@ function NetProfitInformation(props) {
         goal_percentage
     } = props;
 
-    return <div className="col-span-3 row-span-1 flex justify-between p-2 rounded-md bg-slate-800">
-        <div className="flex flex-col justify-between">
+    return <div className="col-span-3 row-span-1 p-3 flex justify-between items-center rounded-md bg-slate-800">
+        <div className="flex flex-col justify-center">
             <p className="text-sm">Net Profit</p>
-            <p className="text-3xl font-bold py-2">${amount}</p>
+            <p className="text-3xl font-bold py-3">${amount}</p>
             <div className={`flex items-center ${trend_indicator === 'up' ? 'text-green-500' : 'text-red-500'}`}>
                 <span>
                     {

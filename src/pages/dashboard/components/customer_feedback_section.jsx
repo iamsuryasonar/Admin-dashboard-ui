@@ -7,9 +7,9 @@ function CustomerFeedBackSection(props) {
     } = props;
 
     return (
-        <div className='w-full col-span-3 row-span-3 rounded-md bg-slate-800 flex flex-col'>
+        <div className='w-full max-h-[400px] lg:col-span-3 lg:row-span-3 rounded-md bg-slate-800 flex flex-col'>
             <p className='p-4 font-bold'>Customer's Feedback</p>
-            <div className='h-full overflow-auto'>
+            <div className='h-full overflow-auto custom-scrollbar'>
                 {
                     feedbacks.map((feedback) => {
                         return (

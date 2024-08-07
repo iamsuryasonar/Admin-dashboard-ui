@@ -10,26 +10,32 @@ function Dashboard() {
 
     const data = useFetchData();
 
-    return <div className=''>
+    return <div className='w-full'>
         {
             data !== null &&
             <div className="w-full h-full p-4">
                 <p className="font-bold pb-4">Dashboard</p>
-                <div className="h-full grid grid-cols-7 gap-5"
+                <div className="h-full w-full flex flex-col lg:grid lg:grid-cols-7 gap-5"
                     style={{
-                        gridAutoRows: "130px",
+                        // gridAutoRows: "120px",
                     }}>
                     <WidgetSection
                         total_orders={data?.other_information.total_orders}
                         total_delivered={data?.other_information.total_delivered}
                         total_cancelled={data?.other_information.total_cancelled}
                         total_revenue={data?.other_information.total_revenue}
+                        net_profit_information={data?.net_profit_information}
                     />
-                    <NetProfitInformation
-                        trend_indicator={data?.net_profit_information.trend_indicator}
-                        amount={data?.net_profit_information.amount}
-                        change_percentage={data?.net_profit_information.change_percentage}
-                        goal_percentage={data?.net_profit_information.goal_percentage}
+                    <CustomGraph xAxisData={data?.xAxisData} yAxisData={data?.yAxisData} />
+                    <HighlightsSection />
+                    <RecentOrders recent_orders={data?.recent_orders} />
+                    <CustomerFeedBackSection feedbacks={data.feedbacks} />
+                    <WidgetSection
+                        total_orders={data?.other_information.total_orders}
+                        total_delivered={data?.other_information.total_delivered}
+                        total_cancelled={data?.other_information.total_cancelled}
+                        total_revenue={data?.other_information.total_revenue}
+                        net_profit_information={data?.net_profit_information}
                     />
                     <CustomGraph xAxisData={data?.xAxisData} yAxisData={data?.yAxisData} />
                     <HighlightsSection />

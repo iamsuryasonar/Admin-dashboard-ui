@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Rating, ThinRoundedStar } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
@@ -13,7 +15,9 @@ function CustomerFeedBackSection(props) {
                 {
                     feedbacks.map((feedback) => {
                         return (
-                            <Feedback profileImage={feedback.profileImage} name={feedback.name} rating={feedback.rating} feedback={feedback.feedback} />
+                            <React.Fragment key={feedback.id}>
+                                <Feedback profileImage={feedback.profileImage} name={feedback.name} rating={feedback.rating} feedback={feedback.feedback} />
+                            </React.Fragment>
                         )
                     })
                 }

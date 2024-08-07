@@ -6,7 +6,7 @@ import { RxCaretRight } from "react-icons/rx";
 
 function HighlightsSection() {
     return (
-        <div className="h-full lg:col-span-3 lg:row-span-2 p-4 rounded-md bg-slate-800 flex flex-col gap-3">
+        <div className="h-full w-full lg:col-span-3 lg:row-span-2 p-4 rounded-md bg-slate-800 flex flex-col gap-3">
             <Highlight Icon={BiTargetLock} icon_background={'#FF9DA0'} icon_color={'red'} title={'Goals'} src={''} />
             <Highlight Icon={CiBurger} icon_background={'#9DADFF'} icon_color={'blue'} title={'Popular Dishes'} src={''} />
             <Highlight Icon={BiDish} icon_background={'#A1FBC7'} icon_color={'green'} title={'Menus'} src={''} />

@@ -7,12 +7,12 @@ function Navbar() {
     const name = 'John Doe';
 
     return (
-        <header className="fixed h-[60px] inset-x-0 z-50 ml-[52px] flex items-center justify-between bg-slate-800">
-            <div className="mx-4 px-2 py-1 flex gap-2 items-center rounded-md border border-slate-600 bg-slate-700">
+        <header className="fixed h-[60px] inset-x-0 z-50 ml-[52px] flex items-center justify-between gap-5 bg-slate-800">
+            <div className="max-w-[300px] mx-4 px-2 py-1 flex items-center gap-2 rounded-md border border-slate-600 bg-slate-700">
                 <CiSearch className="text-white" />
-                <input className="bg-transparent" type="text" placeholder="Search" />
+                <input className="bg-transparent w-full" type="text" placeholder="Search" />
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center place-content-end ">
                 <div className="flex gap-2 items-center text-slate-400">
                     <HeaderIcon notification={false} Icon={FaRegEnvelope} />
                     <HeaderIcon notification={false} Icon={GoGear} />

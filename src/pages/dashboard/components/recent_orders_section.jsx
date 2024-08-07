@@ -6,9 +6,9 @@ function RecentOrders(props) {
         recent_orders,
     } = props;
 
-    return (<div className="w-full max-h-[400px] lg:col-span-4 lg:row-span-3 flex flex-col p-4 rounded-md bg-slate-800 text-white">
-        <h1 className="font-bold mb-4">Recent Orders</h1>
-        <div className="w-full h-full overflow-auto custom-scrollbar">
+    return (<div className="w-full max-h-[400px] lg:col-span-4 lg:row-span-3 p-2 flex flex-col gap-2 rounded-md bg-slate-800 text-white">
+        <h1 className="font-bold pt-2 pl-2">Recent Orders</h1>
+        <div className="w-full h-full pl-2 overflow-auto custom-scrollbar">
             <table className="w-full table-auto divide-y divide-slate-700">
                 <thead>
                     <tr>
@@ -20,7 +20,7 @@ function RecentOrders(props) {
                 </thead>
                 <tbody className="divide-y divide-slate-700">
                     {recent_orders.map((customer, index) => (
-                        <tr key={index}>
+                        <tr key={customer.i}>
                             <td className="flex items-center py-2 pr-6 whitespace-nowrap">
                                 <img
                                     className="h-8 w-8 rounded-full mr-1"

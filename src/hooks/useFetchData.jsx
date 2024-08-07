@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-function useFetchData() {
+function useFetchData(url) {
     const [data, setData] = useState(null);
 
     async function fetchData() {
         try {
-            const response = await fetch('../../../public/static_data.json')
+            const response = await fetch(url)
             if (!response.ok) {
                 throw new Error('Response was not ok');
             }

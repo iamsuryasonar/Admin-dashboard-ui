@@ -8,9 +8,9 @@ import './App.css';
 function App() {
 
   return (
-    <div className="">
+    <div className="bg-slate-900">
       <Sidebar />
-      <main className="flex min-h-svh">
+      <main className="flex">
         <Navbar />
         <div className="w-screen ml-[60px] mt-[60px] min-h-svh bg-slate-900 text-white">
           <Routes>

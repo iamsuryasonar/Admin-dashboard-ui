@@ -10,7 +10,7 @@ function Sidebar() {
     const [activePage] = usePath();
 
     return (
-        <aside className="fixed inset-y-0 left-0 w-[60px] h-svh flex flex-col justify-between items-center bg-slate-800 text-slate-200">
+        <aside className="fixed inset-y-0 left-0 w-[60px] min-h-svh flex flex-col justify-between items-center bg-slate-800 text-slate-200">
             <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-blue-500"></div>
             <div className="w-full pt-[60px]">
                 <SidebarIcon path={'/'} activePage={activePage} name={'dashboard'} Icon={AiFillHome} />

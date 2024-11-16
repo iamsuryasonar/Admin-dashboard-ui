@@ -46,3 +46,11 @@ Admin-dashboard-ui/
 ├── package.json
 └── README.md
 ```
+
+**Screenshot** - 
+
+![admin panel](https://github.com/user-attachments/assets/834e2c04-3d19-4862-83a6-878ba55581a9)
+
+
+
+
